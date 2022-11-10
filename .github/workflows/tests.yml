@@ -6,10 +6,10 @@ on:
   pull_request:
 jobs:
   phpunit:
-    runs-on: "${{ matrix.os }}"
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        php-version: [ 8.0, 8.1 ]
+        php_version: [ 7.4,8.0,8.1 ]
         sw-version: [ 'v4.5.11', 'v4.6.7', 'v4.7.1', 'v4.8.12', 'v5.0.1', 'master' ]
       max-parallel: 12
       fail-fast: false
