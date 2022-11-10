@@ -24,8 +24,9 @@ jobs:
     env:
       SW_VERSION: ${{ matrix.sw-version }}
     steps:
-      - uses: actions/checkout@v2
-      - name: Setup PHP environment
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php_version }}
