@@ -21,7 +21,10 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php_version }}
-          coverage: xdebug
+          tools: phpize
+          extensions: redis, pdo, pdo_mysql, bcmath
+          ini-values: opcache.enable_cli=0
+          coverage: none
       - name: Setup Swoole
         run: |
           sudo apt-get update
