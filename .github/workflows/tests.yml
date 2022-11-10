@@ -30,7 +30,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: ${{ matrix.php_version }}
+          php-version: ${{ matrix.php-version }}
           tools: phpize
           extensions: redis, pdo, pdo_mysql, bcmath
           ini-values: opcache.enable_cli=0
