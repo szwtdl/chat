@@ -7,7 +7,7 @@ on:
 jobs:
   ci:
     name: Test on PHP${{ matrix.php-version }} Swoole-${{ matrix.sw-version }}
-    runs-on: ubuntu-latest
+    runs-on: "${{ matrix.os }}"
     strategy:
       matrix:
         php-version: [ '8.0', '8.1' ]
