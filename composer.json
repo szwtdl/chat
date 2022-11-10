@@ -3,7 +3,8 @@
     "description": "chat live im laravel-chat websocket",
     "type": "library",
     "require": {
-        "php": ">=7.4"
+        "php": ">=7.4",
+        "ext-swoole": ">=4.8"
     },
     "require-dev": {
         "swoole/ide-helper": "^5.0",
